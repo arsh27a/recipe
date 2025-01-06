@@ -22,6 +22,11 @@ const HomePage = () => {
     setSearchMeal(input);
   }
 
+  const handleKeyPress = (evt) => {
+    if (evt.key == "Enter") {
+      apiCalling();
+    }
+  };
   return (
     <div className="home-page-container">
       <Navbar />
@@ -33,6 +38,7 @@ const HomePage = () => {
             className="input-box"
             name="searchAbout"
             onChange={handleInput}
+            onKeyDown={handleKeyPress}
             placeholder="Search food....."
           />
           <button onClick={apiCalling}>Search</button>
