@@ -1,5 +1,5 @@
 import "./App.css";
-import { HomePage, MealInfo, About, SignUp } from "./components";
+import { HomePage, MealInfo, About } from "./components";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
@@ -11,8 +11,6 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<About />} />
-          {/* <Route path="/login" element={<LogIn />} /> */}
-          {/* <Route path="/signup" element={<SignUp />} /> */}
           <Route path="/:mealId" element={<MealInfo />} />
         </Routes>
       </BrowserRouter>

@@ -11,7 +11,7 @@ const Card = ({ details }) => {
               <>
                 <span key={searchedMeal.idMeal} className="meal-container">
                   <img src={searchedMeal.strMealThumb} />
-                  <p>{searchedMeal.strMeal}</p>
+                  <p style={{ paddingTop: "1rem" }}>{searchedMeal.strMeal}</p>
                   <NavLink to={`/${searchedMeal.idMeal}`}>
                     <button>RECIPE</button>
                   </NavLink>
